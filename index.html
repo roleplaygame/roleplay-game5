@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>情侣情趣挑战</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            color: #fff;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        #maleBtn {
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            color: white;
+        }
+        #femaleBtn {
+            background: linear-gradient(45deg, #ff758c, #ff7eb3);
+            color: white;
+        }
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+        .results {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .task-box {
+            width: 48%;
+            min-height: 200px;
+            padding: 20px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.15);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .task-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+        }
+        .task-content {
+            font-size: 18px;
+            line-height: 1.6;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            animation: fadeIn 0.5s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .disclaimer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>💑 情侣情趣挑战 💑</h1>
+        
+        <div class="buttons">
+            <button id="maleBtn">抽取男生任务</button>
+            <button id="femaleBtn">抽取女生任务</button>
+        </div>
+        
+        <div class="results">
+            <div class="task-box">
+                <div class="task-title">👨 男生任务</div>
+                <div class="task-content" id="maleTask">点击上方按钮开始</div>
+            </div>
+            <div class="task-box">
+                <div class="task-title">👩 女生任务</div>
+                <div class="task-content" id="femaleTask">点击上方按钮开始</div>
+            </div>
+        </div>
+        
+        <p class="disclaimer">重要提示：请确保所有活动都是双方完全自愿，提前设立安全词，并在安全舒适的环境中进行</p>
+    </div>
+
+    <script>
+        const maleTasks = [
+            "跪在地上完成整场游戏",
+            "吃女生双脚各二十秒",
+            "脱光衣服",
+            "让女生扇三个嘴巴",
+            "用嘴帮女生脱掉所有衣物",
+            "亲吻女生全身",
+            "按摩女生私密部位一分钟",
+            "69式五分钟",
+            "全程称呼女生为'主人'",
+            "让女生给男生穿上胸衣"
+        ];
+        
+        const femaleTasks = [
+            "让男生舔阴五分钟",
+            "脚踩男生脸十秒",
+            "任意调教男生五分钟",
+            "足交男生五分钟",
+            "用嘴给男生喂水",
+            "亲咬男生耳垂各一分钟",
+            "口交男生五分钟",
+            "用流苏拍打男生十下屁股",
+            "全程称呼男生为'小奴隶'",
+            "说出任意两个指令"
+        ];
+        
+        document.getElementById('maleBtn').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * maleTasks.length);
+            document.getElementById('maleTask').textContent = maleTasks[randomIndex];
+        });
+        
+        document.getElementById('femaleBtn').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * femaleTasks.length);
+            document.getElementById('femaleTask').textContent = femaleTasks[randomIndex];
+        });
+    </script>
+</body>
+</html># roleplay-game5
